@@ -7,11 +7,11 @@ require "isotope_contacts/version"
 Gem::Specification.new do |s|
   s.name        = "isotope_contacts"
   s.version     = IsotopeContacts::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of IsotopeContacts."
-  s.description = "TODO: Description of IsotopeContacts."
+  s.authors     = ["Josh Adams"]
+  s.email       = ["josh@isotope11.com"]
+  s.homepage    = "http://www.isotope11.com"
+  s.summary     = "A Rails 3 engine for contact management."
+  s.description = "A Rails 3 engine for contact management."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
