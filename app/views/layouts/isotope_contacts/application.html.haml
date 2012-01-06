@@ -12,9 +12,10 @@
           = link_to 'Contacts', contacts_path, class: 'brand'
           %ul.nav
             %li= link_to 'New Contact', new_contact_path
-          = form_for @search, :url => contacts_path, :html => { method: :get, class: 'pull-right'} do |f|
-            = f.text_field :first_name_or_last_name_contains
-            = button_tag 'Search', class: 'btn'
+          - if @search
+            = form_for @search, :url => contacts_path, :html => { method: :get, class: 'pull-right'} do |f|
+              = f.text_field :first_name_or_last_name_contains
+              = button_tag 'Search', class: 'btn'
     %div.container-fluid
       = yield
     = yield :javascripts
