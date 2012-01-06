@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20120106173507) do
 
-  create_table "isotope_crm_contacts", :force => true do |t|
+  create_table "isotope_contacts_contacts", :force => true do |t|
     t.string "first_name"
     t.string "last_name"
   end

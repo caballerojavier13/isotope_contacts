@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require
-require "isotope_crm"
+require "isotope_contacts"
 
 module Dummy
   class Application < Rails::Application

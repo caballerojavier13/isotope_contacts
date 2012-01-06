@@ -1,11 +1,17 @@
 require "minitest/autorun"
 require "minitest/rails"
 require 'database_cleaner'
+require 'factory_girl'
+require 'ruby-debug'
 
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb", __FILE__)
 
 require 'capybara/rails'
+require 'capybara_minitest_spec'
+
+# Load support files
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 # If description name ends with 'integration', use this RequestSpec class.
 # It has all the integration test goodies.

@@ -6,7 +6,7 @@ test/dummy/log/*.log
 test/dummy/tmp/
 
 # Imagine specific
-isotope_crm-*.gem
+isotope_contacts-*.gem
 
 # Swap files
 *.sw*

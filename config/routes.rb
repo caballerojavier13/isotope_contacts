@@ -1,2 +1,3 @@
-IsotopeCrm::Engine.routes.draw do
+IsotopeContacts::Engine.routes.draw do
+  resources :contacts
 end

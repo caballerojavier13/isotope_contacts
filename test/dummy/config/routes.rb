@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount IsotopeCrm::Engine => "/isotope_crm"
+  mount IsotopeContacts::Engine => "/isotope_contacts"
 end
