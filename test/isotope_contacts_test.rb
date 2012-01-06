@@ -1,7 +1,7 @@
 require 'minitest_helper'
 
 class IsotopeContactsTest < ActiveSupport::TestCase
-  test "truth" do
+  test "module exists" do
     assert_kind_of Module, IsotopeContacts
   end
 end

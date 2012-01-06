@@ -1,5 +1,13 @@
 module IsotopeContacts
   class ContactsController < ApplicationController
+    def index
+      @contacts = ::IsotopeContacts::Contact.all
+    end
+
+    def new
+      @contact = ::IsotopeContacts::Contact.new(params[:contact])
+    end
+
     def create
       @contact = ::IsotopeContacts::Contact.new(params[:contact])
       if @contact.save

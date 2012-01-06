@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Isotope Contacts
+    = stylesheet_link_tag    "isotope_contacts/application"
+    = javascript_include_tag "isotope_contacts/application"
+    = csrf_meta_tags
+  %body
+    %div.topbar
+      %div.topbar-inner
+        %div.container-fluid
+          = link_to 'Contacts', contacts_path, class: 'brand'
+          %ul.nav
+            %li= link_to 'New Contact', new_contact_path
+    %div.container-fluid
+      .content
+        = yield
+    = yield :javascripts

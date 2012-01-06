@@ -1,0 +1,13 @@
+.contacts-module
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Actions
+    %tbody
+      - @contacts.each do |contact|
+        %tr
+          %td= contact
+          %td
+            = link_to "Edit", edit_contact_path(contact)
+            = button_to "Delete", contact_path(contact), method: :delete
