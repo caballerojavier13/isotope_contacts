@@ -1,13 +1,38 @@
 .contact-module
-  .name= @contact
-  %h5 Phone Numbers
-  %ul.phone_numbers
-    - @contact.phone_numbers.each do |phone_number|
-      %li= phone_number
-  %ul.emails
-    - @contact.emails.each do |email|
-      %li= email
-  .links
+  .contact
+    %h2= @contact
     = link_to "Edit", edit_contact_path(@contact), rel: 'edit-contact', class: 'btn primary'
+  .phone_numbers
+    %h5 Phone Numbers
+    %table.zebra-striped
+      %thead
+        %tr
+          %th Name
+          %th Number
+          %th Actions
+      %tbody
+        - @contact.phone_numbers.each do |phone_number|
+          %tr
+            %td= phone_number.name
+            %td= phone_number.number
+            %td.object-actions
+              = link_to "Edit", edit_contact_phone_number_path(@contact, phone_number), rel: 'edit-phone-number', class: 'btn'
+              = button_to "Delete", contact_phone_number_path(@contact, phone_number), rel: 'edit-phone-number', class: 'btn danger', method: :delete
     = link_to "Add Phone Number", new_contact_phone_number_path(@contact), rel: 'add-phone-number', class: 'btn'
-    = link_to "Add Email Address", edit_contact_path(@contact), rel: 'add-email-address', class: 'btn'
+  .emails
+    %h5 Emails
+    %table.zebra-striped
+      %thead
+        %tr
+          %th Name
+          %th Number
+          %th Actions
+      %tbody
+        - @contact.emails.each do |email|
+          %tr
+            %td= email.name
+            %td= email.email
+            %td.object-actions
+              = link_to "Edit", edit_contact_email_path(@contact, email), rel: 'edit-email', class: 'btn'
+              = button_to "Delete", contact_email_path(@contact, email), rel: 'edit-email', class: 'btn danger', method: :delete
+    = link_to "Add Email Address", new_contact_email_path(@contact), rel: 'add-email-address', class: 'btn'
