@@ -8,4 +8,9 @@ FactoryGirl.define do
     name 'Home'
     association :contact
   end
+  factory :email, class: IsotopeContacts::Email do
+    email 'josh@isotope11.com'
+    name 'Home'
+    association :contact
+  end
 end

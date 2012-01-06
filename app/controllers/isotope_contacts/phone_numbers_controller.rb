@@ -3,11 +3,11 @@ module IsotopeContacts
     before_filter :load_contact
 
     def new
-      @phone_number = IsotopeContacts::PhoneNumber.new(params[:phone_number])
+      @phone_number = @contact.phone_numbers.new(params[:phone_number])
     end
 
     def create
-      @phone_number = IsotopeContacts::PhoneNumber.new(params[:phone_number])
+      @phone_number = @contact.phone_numbers.new(params[:phone_number])
       if @phone_number.save
         flash[:notice] = "Phone Number created successfully."
         redirect_to contact_path(@contact)
