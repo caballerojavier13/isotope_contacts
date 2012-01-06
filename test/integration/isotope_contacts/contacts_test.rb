@@ -15,7 +15,10 @@ describe 'Contact integration' do
     contact = FactoryGirl.create :contact, first_name: 'Reginald'
     visit "/isotope_contacts/contacts/#{contact.id}"
     within '.contact-module' do
-      page.must_have_content('Reginald')
+      page.must_have_content 'Reginald'
+      within 'a[rel=edit-contact]' do
+        page.must_have_content "Edit"
+      end
     end
   end
 

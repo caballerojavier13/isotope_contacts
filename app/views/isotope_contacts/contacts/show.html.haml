@@ -1,2 +1,4 @@
 .contact-module
   .name= @contact
+  .links
+    = link_to "Edit", edit_contact_path(@contact), rel: 'edit-contact', class: 'btn primary'
