@@ -43,4 +43,14 @@ describe 'Contact integration' do
       page.must_have_selector 'input[type=submit]'
     end
   end
+
+  it 'shows me the edit contact form on edit' do
+    contact = FactoryGirl.create :contact, first_name: 'Reginald'
+    visit "/isotope_contacts/contacts/#{contact.id}/edit"
+    within '.contact-form-module form' do
+      page.must_have_selector 'input#contact_first_name'
+      page.must_have_selector 'input#contact_last_name'
+      page.must_have_selector 'input[type=submit]'
+    end
+  end
 end

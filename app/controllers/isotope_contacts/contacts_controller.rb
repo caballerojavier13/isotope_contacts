@@ -8,6 +8,10 @@ module IsotopeContacts
       @contact = ::IsotopeContacts::Contact.new(params[:contact])
     end
 
+    def show
+      @contact = ::IsotopeContacts::Contact.find(params[:id])
+    end
+
     def create
       @contact = ::IsotopeContacts::Contact.new(params[:contact])
       if @contact.save
@@ -19,8 +23,19 @@ module IsotopeContacts
       end
     end
 
-    def show
+    def edit
       @contact = ::IsotopeContacts::Contact.find(params[:id])
+    end
+
+    def update
+      @contact = ::IsotopeContacts::Contact.find(params[:id])
+      if @contact.update_attributes(params[:contact])
+        flash[:notice] = "Contact was updated successfully."
+        redirect_to contact_path(@contact)
+      else
+        flash.now[:error] = "There was a problem updating the contact."
+        render :edit
+      end
     end
 
     def destroy
