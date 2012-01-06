@@ -4,6 +4,19 @@ body{
   padding-top: 60px;
 }
 
+.contact-module{
+  .contact{
+    h2{
+      display: inline-block;
+    }
+    a{
+      position: relative;
+      top: -4px;
+      margin-left: 10px;
+    }
+  }
+}
+
 .object-actions{
   form{
     display: inline-block;

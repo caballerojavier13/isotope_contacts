@@ -2,6 +2,7 @@
   .contact
     %h2= @contact
     = link_to "Edit", edit_contact_path(@contact), rel: 'edit-contact', class: 'btn primary'
+  %hr
   .phone_numbers
     %h5 Phone Numbers
     %table.zebra-striped
@@ -19,13 +20,14 @@
               = link_to "Edit", edit_contact_phone_number_path(@contact, phone_number), rel: 'edit-phone-number', class: 'btn'
               = button_to "Delete", contact_phone_number_path(@contact, phone_number), rel: 'edit-phone-number', class: 'btn danger', method: :delete
     = link_to "Add Phone Number", new_contact_phone_number_path(@contact), rel: 'add-phone-number', class: 'btn'
+  %hr
   .emails
     %h5 Emails
     %table.zebra-striped
       %thead
         %tr
           %th Name
-          %th Number
+          %th Email
           %th Actions
       %tbody
         - @contact.emails.each do |email|
