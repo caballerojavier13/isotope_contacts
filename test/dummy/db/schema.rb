@@ -11,11 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120106173507) do
+ActiveRecord::Schema.define(:version => 20120106210546) do
 
   create_table "isotope_contacts_contacts", :force => true do |t|
     t.string "first_name"
     t.string "last_name"
+  end
+
+  create_table "isotope_contacts_phone_numbers", :force => true do |t|
+    t.string  "number"
+    t.string  "name"
+    t.integer "contact_id"
   end
 
 end

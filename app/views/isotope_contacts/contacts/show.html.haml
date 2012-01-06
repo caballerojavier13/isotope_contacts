@@ -2,3 +2,5 @@
   .name= @contact
   .links
     = link_to "Edit", edit_contact_path(@contact), rel: 'edit-contact', class: 'btn primary'
+    = link_to "Add Phone Number", edit_contact_path(@contact), rel: 'add-phone-number', class: 'btn'
+    = link_to "Add Email Address", edit_contact_path(@contact), rel: 'add-email-address', class: 'btn'

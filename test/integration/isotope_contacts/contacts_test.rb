@@ -16,9 +16,9 @@ describe 'Contact integration' do
     visit "/isotope_contacts/contacts/#{contact.id}"
     within '.contact-module' do
       page.must_have_content 'Reginald'
-      within 'a[rel=edit-contact]' do
-        page.must_have_content "Edit"
-      end
+      page.must_have_selector 'a[rel=edit-contact]'
+      page.must_have_selector 'a[rel=add-phone-number]'
+      page.must_have_selector 'a[rel=add-email-address]'
     end
   end
 

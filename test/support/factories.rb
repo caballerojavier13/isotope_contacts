@@ -3,4 +3,9 @@ FactoryGirl.define do
     first_name 'Test'
     last_name 'Contact'
   end
+  factory :phone_number, class: IsotopeContacts::PhoneNumber do
+    number '2055551212'
+    name 'Home'
+    association :contact
+  end
 end
