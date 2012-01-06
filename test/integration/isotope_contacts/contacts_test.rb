@@ -26,6 +26,12 @@ describe 'Contact integration' do
     visit "/isotope_contacts/contacts/#{IsotopeContacts::Contact.last.id}"
   end
 
+  it 'destroys a contact on delete' do
+    contact = FactoryGirl.create :contact, first_name: 'Reginald'
+    page.driver.follow :delete, "/isotope_contacts/contacts/#{contact.id}"
+    IsotopeContacts::Contact.find_by_id(contact.id).must_equal nil
+  end
+
   it 'shows me the new contact form on new' do
     visit "/isotope_contacts/contacts/new"
     within '.contact-form-module form' do

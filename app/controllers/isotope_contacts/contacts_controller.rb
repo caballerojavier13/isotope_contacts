@@ -22,5 +22,16 @@ module IsotopeContacts
     def show
       @contact = ::IsotopeContacts::Contact.find(params[:id])
     end
+
+    def destroy
+      @contact = ::IsotopeContacts::Contact.find(params[:id])
+      if @contact.destroy
+        flash[:notice] = "Contact was deleted successfully."
+        redirect_to contacts_path
+      else
+        flash[:error] = "There was a problem deleting the contact"
+        redirect_to contacts_path
+      end
+    end
   end
 end
