@@ -1,7 +1,8 @@
 module IsotopeContacts
   class ContactsController < ApplicationController
     def index
-      @contacts = ::IsotopeContacts::Contact.all
+      @search = ::IsotopeContacts::Contact.search(params[:search])
+      @contacts = @search.all
     end
 
     def new
