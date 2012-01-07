@@ -32,3 +32,4 @@ of a dummy Rails app. The process for getting the tests to run is similar to set
 Once this setup has been done, IsotopeContacts's specs can be run by executing this command:
 
     bundle exec rake test
+
