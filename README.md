@@ -4,6 +4,14 @@ IsotopeContacts is a gem providing a rails engine for contact management.
 ## Demo site
 [See it in action here.](http://isotope-contacts-demo.heroku.com)
 
+## Screenshots
+Here are some screenshots of what it looks like:
+
+![Contact Listing](https://raw.github.com/isotope11/isotope_contacts/master/doc/contacts_listing.png)
+
+
+![Contact Show](https://raw.github.com/isotope11/isotope_contacts/master/doc/contact_show.png)
+
 ## Installation
 You can install it by adding the following to your Gemfile:
 
