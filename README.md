@@ -1,6 +1,8 @@
 # IsotopeContacts
 IsotopeContacts is a gem providing a rails engine for contact management.
 
+It is compatible with Rails 3.1+
+
 ## Demo site
 [See it in action here.](http://isotope-contacts-demo.heroku.com)
 
