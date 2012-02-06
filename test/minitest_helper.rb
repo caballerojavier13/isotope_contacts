@@ -25,6 +25,7 @@ MiniTest::Spec.register_spec_type /integration$/i, RequestSpec
 
 # Database cleaner.
 DatabaseCleaner.strategy = :truncation
+
 class MiniTest::Spec
   before :each do
     DatabaseCleaner.clean
