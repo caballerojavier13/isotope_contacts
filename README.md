@@ -35,3 +35,5 @@ Once this setup has been done, IsotopeContacts's specs can be run by executing t
 
     bundle exec rake test
 
+NOTE: Once https://github.com/josevalim/inherited_resources/pull/191 is
+closed this branch can be merged
